@@ -1,1 +1,3 @@
-# compound-interest-calculator
+# Compound Interest Calculator
+App designed to calculate and visualize compound interest based on certain parameters. Written in Java, with the UI designed using SceneBuilder.
+![Alt text](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/af0a6a6b-c6f8-4c4c-be93-25dfa2bccd71/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220113%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220113T211106Z&X-Amz-Expires=86400&X-Amz-Signature=616071c0f7edd0f46ca047c7116f6ee32e6addf8a6d33b4a5047c24a5963c46c&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D"Untitled.png"&x-id=GetObject "Usage")
