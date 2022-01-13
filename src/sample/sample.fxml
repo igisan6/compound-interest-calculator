@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <HBox layoutX="14.0" layoutY="14.0">
+         <children>
+            <Label text="Compound Interest Calculator">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="21.0" layoutY="52.0">
+         <children>
+            <VBox spacing="10.0">
+               <children>
+                  <Label text="Principal ($):">
+                     <padding>
+                        <Insets bottom="3.0" top="3.0" />
+                     </padding>
+                  </Label>
+                  <Label text="Annual Interest (%):">
+                     <padding>
+                        <Insets bottom="3.0" top="3.0" />
+                     </padding>
+                  </Label>
+                  <Label text="Compounding Frequency:">
+                     <padding>
+                        <Insets bottom="3.0" top="3.0" />
+                     </padding>
+                  </Label>
+                  <Label text="Number of Years:">
+                     <padding>
+                        <Insets bottom="3.0" top="3.0" />
+                     </padding>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <VBox>
+               <children>
+                  <TextField fx:id="principalText">
+                     <VBox.margin>
+                        <Insets bottom="6.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="interestText">
+                     <VBox.margin>
+                        <Insets bottom="6.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <ChoiceBox fx:id="frequencyChoice" onMouseEntered="#initializeFrequency" prefHeight="27.0" prefWidth="161.0">
+                     <VBox.margin>
+                        <Insets bottom="6.0" />
+                     </VBox.margin>
+                  </ChoiceBox>
+                  <TextField fx:id="yearText">
+                     <VBox.margin>
+                        <Insets bottom="6.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <TableView fx:id="table" layoutX="357.0" layoutY="36.0" prefHeight="192.0" prefWidth="426.0">
+        <columns>
+          <TableColumn fx:id="yearColumn" prefWidth="75.0" text="Year" />
+          <TableColumn fx:id="openingBalanceColumn" prefWidth="115.3333740234375" text="Opening Balance" />
+            <TableColumn fx:id="interestColumn" prefWidth="104.6666259765625" text="Interest" />
+            <TableColumn fx:id="closingBalanceColumn" prefWidth="130.33331298828125" text="Closing Balance" />
+        </columns>
+      </TableView>
+      <Button fx:id="calculate" layoutX="210.0" layoutY="198.0" mnemonicParsing="false" onAction="#calculateOnPress" text="Calculate" />
+      <BarChart fx:id="barchart" layoutX="15.0" layoutY="250.0" prefHeight="332.0" prefWidth="769.0" title="Balance Growth over Years">
+        <xAxis>
+          <CategoryAxis fx:id="yearAxis" animated="false" label="Years" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="openingBalanceAxis" animated="false" label="Opening Balance" side="LEFT" />
+        </yAxis>
+      </BarChart>
+   </children>
+</Pane>
